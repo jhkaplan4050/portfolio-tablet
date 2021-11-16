@@ -6,9 +6,7 @@ body {
 header {
     background-color: white;
     display: block;
-    /* flex-flow: column wrap;
-    align-items: center;
-    justify-content: center; */
+    margin-bottom: 10px;
 }
 
 
@@ -41,6 +39,10 @@ li {
 }
 
 
+.skip {
+    visibility: hidden;
+}
+
 
 footer{
     background-color: black;
@@ -72,8 +74,8 @@ h2 {
 
 #earth {
     display: block;
-    height: 200px;
-    width: 200px; 
+    height: 250px;
+    width: 250px; 
     margin-left: auto;
     margin-right: auto;
 }
@@ -85,10 +87,22 @@ p a {
 
 /* about.html CSS specific */
 
+.about {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, auto);
+    max-width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+    
+}
+
 #about_me img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding: 10px;
+
 }
 
 /* crochet_history.html CSS specific */
@@ -101,14 +115,12 @@ p a {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(8, auto);
     grid-gap: 10px;
-
-    /* how do I center my images within grid? */
-
-}
-
-.container, img {
     max-width: 100%;
     height: auto;
+    text-align: center;
+    padding: 10px;
+    margin: 20px 10px;
+
 }
 
 
@@ -119,6 +131,8 @@ p a {
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
+    padding: 10px;
+    margin-bottom: 20px;
 }
 
 /* future.html CSS specific */
@@ -126,9 +140,10 @@ p a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 95%;
-    margin: auto;
     grid-template-rows: auto auto;
     grid-gap: 10px;
+    padding: 10px;
+    margin: 10px;
 } 
 
 #future_block_1, #future_block_3 {
@@ -155,8 +170,26 @@ p a {
         flex-flow: row wrap;
         justify-content: space-around;
     }
-    
-    
+   
+
+    /* implement Skip to Main  */
+
+    .skip {
+        visibility: visible;
+    }
+
+
+    /* welcome.html CSS specific */
+
+    #earth {
+        height: 500px;
+        width: 500px; 
+    }
+
+    #enter {
+        font-size: 1.5em;
+    }
+
     /* crochet_history.html CSS specific */
 
     .container {
