@@ -1,0 +1,196 @@
+body {
+    font-family: "Open Sans";
+    background-color: #e4f5dc;
+}
+
+header {
+    background-color: white;
+    display: block;
+    /* flex-flow: column wrap;
+    align-items: center;
+    justify-content: center; */
+}
+
+
+.nav_links {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+.nav_link a {
+    text-decoration: none;
+}
+
+.nav_links .current {
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+
+.nav_links :visited {
+    color: #000000;
+}
+
+.nav_links :hover {
+    color: green;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+
+
+footer{
+    background-color: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+  }
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+
+/* welcome.html CSS specific */
+
+#enter {
+    text-align: center;
+}
+
+
+#earth {
+    display: block;
+    height: 200px;
+    width: 200px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p a {
+    color: black;
+}
+
+
+/* about.html CSS specific */
+
+#about_me img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* crochet_history.html CSS specific */
+
+
+.container {
+    display: grid;
+    width: 95%;
+    margin: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, auto);
+    grid-gap: 10px;
+
+    /* how do I center my images within grid? */
+
+}
+
+.container, img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* projects.html CSS specific */
+
+.indv_projects {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+/* future.html CSS specific */
+.future {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 95%;
+    margin: auto;
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
+} 
+
+#future_block_1, #future_block_3 {
+    grid-column: 1 / span 1;
+}
+
+#future_block_2, #future_block_4 {
+    grid-column: 2 / span 1;
+}
+
+#future_block_1, #future_block_2 {
+    grid-row: 1 / span 1;
+}
+
+#future_block_3, #future_block_4 {
+    grid-row: 2 / span 1;
+}
+
+@media screen and (min-width: 800px){
+
+    /* change header */
+
+    .nav_links {
+        flex-flow: row wrap;
+        justify-content: space-around;
+    }
+    
+    
+    /* crochet_history.html CSS specific */
+
+    .container {
+        display: grid;
+        width: 95%;
+        margin: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-gap: 10px;
+    }
+
+    #history_block_1, #history_block_4, #history_block_5, #history_block_8 {
+        grid-column: 1 / span 1;
+    } 
+
+
+    #history_block_2, #history_block_3, #history_block_6, #history_block_7 {
+        grid-column: 2 / span 1;
+    } 
+
+    #history_block_1, #history_block_2 {
+        grid-row: 1 / span 1;
+    }
+
+    #history_block_4, #history_block_3 {
+        grid-row: 2 / span 1;
+    }
+
+    #history_block_5, #history_block_6 {
+        grid-row: 3 / span 1;
+    }
+
+    #history_block_8, #history_block_7 {
+        grid-row: 4 / span 1;
+    }
+
+}
