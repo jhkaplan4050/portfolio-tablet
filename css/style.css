@@ -28,7 +28,7 @@ header {
 .nav_links :visited {
     color: #000000;
 }
-
+ 
 .nav_links :hover {
     color: green;
 }
@@ -39,8 +39,29 @@ li {
 }
 
 
-.skip {
-    visibility: hidden;
+.skip a {
+    position: absolute;
+    top: -40px;
+    left: 0px;
+    z-index: 1;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    background-color: white;
+    text-decoration: none;
+}
+
+.skip a:focus{   
+    top: 0px;
+    border: solid black;
+
+}
+
+.skip :visited {
+    color: #000000;
+}
+
+.skip :hover {
+    color: green; 
 }
 
 
@@ -62,6 +83,7 @@ h1 {
 h2 {
     text-align: center;
     font-size: 1.5em;
+    font-weight: bold;
 }
 
 
@@ -102,6 +124,8 @@ p a {
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
+    width: 300px;
+    height: auto;
 
 }
 
@@ -124,6 +148,12 @@ p a {
 }
 
 
+#history_block_2 img, #history_block_4 img, #history_block_6 img, #history_block_8 img {
+    width: 400px;
+    height: auto;
+} 
+
+
 /* projects.html CSS specific */
 
 .indv_projects {
@@ -133,6 +163,13 @@ p a {
     align-content: center;
     padding: 10px;
     margin-bottom: 20px;
+}
+
+
+.project {
+    width: 400px;
+    height: auto; 
+    padding: 10px;
 }
 
 /* future.html CSS specific */
@@ -162,7 +199,12 @@ p a {
     grid-row: 2 / span 1;
 }
 
-@media screen and (min-width: 800px){
+#future_block_2 img, #future_block_3 img {
+    width: 500px;
+    height: auto; 
+}
+
+@media screen and (min-width: 760px){
 
     /* change header */
 
@@ -170,14 +212,11 @@ p a {
         flex-flow: row wrap;
         justify-content: space-around;
     }
-   
 
-    /* implement Skip to Main  */
-
-    .skip {
-        visibility: visible;
+    .skip a:focus {
+        top: 40px;
     }
-
+   
 
     /* welcome.html CSS specific */
 
